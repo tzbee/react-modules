@@ -63,14 +63,11 @@ var SearchWrapper = React.createClass({
 		return {results: [], loading: false};
 	},
 	onSubmit: function(keyword, engine) {
-		var url = this.props.createURL(keyword, engine);
 		this.setState({loading: true});
 		
-		$.getJSON(url, function(results) {
-			this.setState({results: results, loading: false});
-		}.bind(this)).fail(function() {
-   			 this.setState({results: ['FAIL'], loading: false});
-  		}.bind(this));
+		this.props.onSubmit(keyword, engine, function(err, results) {
+			this.setState({results: !err ? results : ['FAIL'], loading: false});
+		}.bind(this));
 	},
 	render: function() {
 		return 	<div className='searchWrapper'>
