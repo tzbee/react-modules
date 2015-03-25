@@ -22,7 +22,7 @@ onSubmit (function(keyword, engine, cb(err, result)))
 
 ## Example
 
-```
+```js
 // Callback function to pass to the component
 var getSearchResults = function(keyword, engine, cb) {
 	var url = '/search' + keyword + (engine ? '?engine=' + engine : '');
