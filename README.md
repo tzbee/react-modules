@@ -22,7 +22,7 @@ onSubmit (function(keyword, engine, cb(err, result)))
 
 ## Example
 
-// Callback function to pass to the component
+```// Callback function to pass to the component
 var getSearchResults = function(keyword, engine, cb) {
 	var url = '/search' + keyword + (engine ? '?engine=' + engine : '');
 	$.getJSON(url, function(results) {
@@ -34,3 +34,4 @@ var getSearchResults = function(keyword, engine, cb) {
 
 // Render the page
 React.render(<SearchWrapper onSubmit={getSearchResults} />, document.getElementById('content'))
+```
