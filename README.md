@@ -1,24 +1,20 @@
-# reactModules
+## Description
 
-A set of react components
-
-Content atm:
-
-- Search Wrapper component with
+- A search component composed of:
  - 2 Search bars
  - Submit button
  - Result box
 
-Simply pass the source url to the search wrapper component and the component will displays 
-the link list in the result box on submit.
 
 ## API
 
 SearchWrapper accepts the following property:
 
+```
 onSubmit (function(keyword, engine, cb(err, result)))
+```
+, called by the component when form is submitted
 
-- is called by the component when form is submitted
 
 ## Example
 
